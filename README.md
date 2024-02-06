@@ -35,8 +35,10 @@ location and render the notebook using the `jupyter_notebook` tag:
 
 ```html
 <!DOCTYPE html>
+
 <!-- Load the tag library -->
 {% load jupyter_tags %}
+
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -50,8 +52,10 @@ location and render the notebook using the `jupyter_notebook` tag:
 <body>
 
 <div class="container mt-3" style="max-width: 840px">
+
     <!-- Render notebook -->
     {% jupyter_notebook notebook %}
+    
 </div>
 
 </body>
