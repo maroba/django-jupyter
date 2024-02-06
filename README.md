@@ -18,6 +18,9 @@ class MyModel(models.Model):
 
 ```
 
+This would store related media files (like images in your notebook) in a directory
+tree in `MEDIA_ROOT / "notebooks"`.
+
 #### Upload Jupyter notebook with custom form field
 
 ```python
