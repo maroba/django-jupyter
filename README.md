@@ -12,7 +12,9 @@ from django_jupyter.models import JupyterNotebookField
 
 
 class MyModel(models.Model):
+    # ... other model fields ...
     notebook = JupyterNotebookField(upload_to="notebooks")
+    # ... other model fields ...
 
 ```
 
@@ -24,7 +26,9 @@ from django_jupyter.forms import JupyterNotebookField
 
 
 class MyForm(forms.Form):
+    # ... other form fields
     notebook = JupyterNotebookField()
+    # ... other form fields
 
 ```
 
@@ -55,7 +59,7 @@ location and render the notebook using the `jupyter_notebook` tag:
 
     <!-- Render notebook -->
     {% jupyter_notebook notebook %}
-    
+
 </div>
 
 </body>
