@@ -31,7 +31,7 @@ class MyForm(forms.Form):
 #### Render the notebook in a view using tags
 
 Just load the tag library, put the tags `jupyter_header` and `jupyter_after_body` at their appropriate
-location and render the notebook using the ``
+location and render the notebook using the `jupyter_notebook` tag:
 
 ```html
 <!DOCTYPE html>
