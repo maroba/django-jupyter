@@ -64,7 +64,7 @@ location and render the notebook using the ``
 
 The `notebook` variable is pushed into the view context as usual in Django:
 
-```
+```python
 def my_view(request):
     my_instance = MyModel.objects.first()
     return render(request, template_name, {
