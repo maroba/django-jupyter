@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load jupyter_tags %}
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    {% jupyter_header %}
+
+</head>
+
+<body>
+
+<div class="container mt-3" style="max-width: 840px">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+</body>
+
+{% jupyter_after_body %}
+
+</html>
