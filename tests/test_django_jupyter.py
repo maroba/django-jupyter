@@ -34,14 +34,17 @@ class TestSmoke(TestCase):
         self.assertTrue(os.path.exists(BASE_DIR / "media" / "example"))
         self.assertTrue(os.path.exists(BASE_DIR / "media" / "example" / "article.html"))
         self.assertTrue(os.path.exists(BASE_DIR / "media" / "example" / "_images"))
-        pattern = os.path.join(BASE_DIR / "media" / "example", "**/*.png")
-        png_files = glob.glob(pattern, recursive=True)
+        png_files = self.get_png_media_files()
         self.assertTrue(len(png_files) == 1)
 
     def assert_media_files_do_not_exists(self):
         self.assertFalse(os.path.exists(BASE_DIR / "media" / "example"))
 
-    def test_happy_path(self):
+    def get_png_media_files(self):
+        pattern = os.path.join(BASE_DIR / "media" / "example", "**/*.png")
+        return glob.glob(pattern, recursive=True)
+
+    def test_happy_path_save_and_delete(self):
         # Start with empty media directory
         self.assert_media_files_do_not_exists()
 

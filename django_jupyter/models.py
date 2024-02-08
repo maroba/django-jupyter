@@ -73,7 +73,9 @@ class JupyterNotebookField(models.FileField):
 
         shutil.copy(outputdir / "article.html", file_path_dir)
         if os.path.exists(outputdir / "_images"):
-            shutil.copytree(outputdir / "_images", file_path_dir / "_images")
+            shutil.copytree(
+                outputdir / "_images", file_path_dir / "_images", dirs_exist_ok=True
+            )
 
         shutil.rmtree(tempdir)
 
