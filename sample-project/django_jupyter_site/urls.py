@@ -20,12 +20,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from demo_app.views import MyModelFormView, NotebookView
+from demo_app.views import MyModelFormView, NotebookView, NotebookDeleteView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("test/", MyModelFormView.as_view()),
-    path("test2/", NotebookView.as_view()),
+    path("upload/", MyModelFormView.as_view()),
+    path("notebook/<int:pk>/", NotebookView.as_view()),
+    path("notebook/<int:pk>/delete/", NotebookDeleteView.as_view()),
 ]
 
 if settings.DEBUG:

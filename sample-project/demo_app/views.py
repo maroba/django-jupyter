@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, TemplateView
+from django.views.generic import CreateView, TemplateView, RedirectView
 
 from .models import MyModel
 from .forms import MyModelForm
@@ -17,6 +17,14 @@ class NotebookView(TemplateView):
 
     def get_context_data(self, **kwargs):
         ctx = super().get_context_data(**kwargs)
-        instance = MyModel.objects.last()
+        instance = MyModel.objects.get(pk=self.kwargs["pk"])
         ctx["notebook"] = instance.notebook
         return ctx
+
+
+class NotebookDeleteView(RedirectView):
+    url = "/upload/"
+
+    def get(self, request, *args, **kwargs):
+        MyModel.objects.get(pk=self.kwargs["pk"]).delete()
+        return super().get(request, *args, **kwargs)
