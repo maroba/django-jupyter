@@ -1,4 +1,5 @@
 # django-jupyter
+[![PyPI version](https://badge.fury.io/py/django-jupyter.svg)](https://badge.fury.io/py/django-jupyter?branch=main&kill_cache=1)
 
 A Django app for storing Jupyter notebooks in your database and rendering them in views.
 
