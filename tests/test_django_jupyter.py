@@ -1,7 +1,3 @@
-# boot_django.py
-#
-# This file sets up and configures Django. It's used by scripts that need to
-# execute as if running in a Django server.
 import glob
 import os
 import os.path
