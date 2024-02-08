@@ -1,0 +1,92 @@
+<article class="bd-article">
+<section class="tex2jax_ignore mathjax_ignore" id="jupytext-notebook-with-myst-markdown">
+<h1>Jupytext Notebook with myst Markdown<a class="headerlink" href="#jupytext-notebook-with-myst-markdown" title="Link to this heading">#</a></h1>
+<p>Jupytext allows to write Jupyter notebooks completely in Markdown format. The advantage: you can use Myst Markdown flavor for enriched editing functionalities. For example, without myst you couldn’t easily do the following:</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use Jupytext in Jupyter Lab. It works just as normal Jupyter notebooks, but you can use
+Myst features, like this tip.</p>
+</div>
+<p>This is some inline math, <span class="math notranslate nohighlight">\(a^2+b^2=c^2\)</span>.</p>
+<p>And some block math:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^2x^\mu}{d\tau^2} = \Gamma^\mu_{\alpha\beta}\frac{dx^\alpha}{d\tau}\frac{dx^\beta}{d\tau}
+\]</div>
+<p>And some code with graphics</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.00000000e+00,  6.34239197e-02,  1.26592454e-01,  1.89251244e-01,
+        2.51147987e-01,  3.12033446e-01,  3.71662456e-01,  4.29794912e-01,
+        4.86196736e-01,  5.40640817e-01,  5.92907929e-01,  6.42787610e-01,
+        6.90079011e-01,  7.34591709e-01,  7.76146464e-01,  8.14575952e-01,
+        8.49725430e-01,  8.81453363e-01,  9.09631995e-01,  9.34147860e-01,
+        9.54902241e-01,  9.71811568e-01,  9.84807753e-01,  9.93838464e-01,
+        9.98867339e-01,  9.99874128e-01,  9.96854776e-01,  9.89821442e-01,
+        9.78802446e-01,  9.63842159e-01,  9.45000819e-01,  9.22354294e-01,
+        8.95993774e-01,  8.66025404e-01,  8.32569855e-01,  7.95761841e-01,
+        7.55749574e-01,  7.12694171e-01,  6.66769001e-01,  6.18158986e-01,
+        5.67059864e-01,  5.13677392e-01,  4.58226522e-01,  4.00930535e-01,
+        3.42020143e-01,  2.81732557e-01,  2.20310533e-01,  1.58001396e-01,
+        9.50560433e-02,  3.17279335e-02, -3.17279335e-02, -9.50560433e-02,
+       -1.58001396e-01, -2.20310533e-01, -2.81732557e-01, -3.42020143e-01,
+       -4.00930535e-01, -4.58226522e-01, -5.13677392e-01, -5.67059864e-01,
+       -6.18158986e-01, -6.66769001e-01, -7.12694171e-01, -7.55749574e-01,
+       -7.95761841e-01, -8.32569855e-01, -8.66025404e-01, -8.95993774e-01,
+       -9.22354294e-01, -9.45000819e-01, -9.63842159e-01, -9.78802446e-01,
+       -9.89821442e-01, -9.96854776e-01, -9.99874128e-01, -9.98867339e-01,
+       -9.93838464e-01, -9.84807753e-01, -9.71811568e-01, -9.54902241e-01,
+       -9.34147860e-01, -9.09631995e-01, -8.81453363e-01, -8.49725430e-01,
+       -8.14575952e-01, -7.76146464e-01, -7.34591709e-01, -6.90079011e-01,
+       -6.42787610e-01, -5.92907929e-01, -5.40640817e-01, -4.86196736e-01,
+       -4.29794912e-01, -3.71662456e-01, -3.12033446e-01, -2.51147987e-01,
+       -1.89251244e-01, -1.26592454e-01, -6.34239197e-02, -2.44929360e-16])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x115793df0&gt;]
+</pre></div>
+</div>
+<img alt="_images/8dacaf3adff02e19da7bc677eb048fea486d3b29ad1be77dce86a24bd18f312e.png" src="{{ notebook_dir }}/_images/8dacaf3adff02e19da7bc677eb048fea486d3b29ad1be77dce86a24bd18f312e.png"/>
+</div>
+</div>
+</section>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'python3'</script>
+</article>

@@ -91,7 +91,7 @@ First install the package:
 pip install -U django-jupyter
 ```
 
-Then activate the app in our `settings.py`:
+Then activate the app in your `settings.py`:
 
 ```
 INSTALLED_APPS = [
@@ -102,3 +102,4 @@ INSTALLED_APPS = [
     ...
 ]
 ```
+
